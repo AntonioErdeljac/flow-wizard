@@ -1,7 +1,6 @@
 import React from 'react';
 import {  Group, MultiSelect, Paper, Text, ThemeIcon } from '@mantine/core';
 import { PlayerPlay } from 'tabler-icons-react';
-import { find } from 'lodash';
 
 type Props = {
   description: string;

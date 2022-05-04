@@ -3,11 +3,9 @@ import { AppShell, Container, MantineProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import { find } from 'lodash';
 
+import intents from './intents.json';
 import { Sidebar } from './components';
 import { Intent } from './fragments';
-
-import intents from './intents.json';
-import { useLocalStorage } from '@mantine/hooks';
 
 function App() {
   const [activeIntent, setActiveIntent] = useState(() => intents[0].id);
