@@ -13,7 +13,6 @@ type Props = {
 
 const Sidebar: React.FC<Props> = ({ onChange, active }) => {
   const { classes, cx } = useStyles();
-
   const links = data.map((item) => {
     const Icon = iconsMap[item.icon as any];
 
