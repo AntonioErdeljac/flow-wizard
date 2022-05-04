@@ -1,6 +1,6 @@
 # flow-wizard
 
-Flow Wizard built using Typescript and React, uses LocalStorage as DB.
+Flow Wizard built using Typescript and React, uses LocalStorage as DB. React Testing Library as Unit Test Coverage. CRA as bolerplate.
 
 ### CI / CD
 
@@ -12,11 +12,6 @@ Flow Wizard built using Typescript and React, uses LocalStorage as DB.
 ### Lint
 
 [![eslint: airbnb](https://img.shields.io/badge/Eslint-Airbnb-red?logo=airbnb&style=flat)](https://github.com/airbnb/javascript)
-
-### Test
-
-[![testing: Jest](https://img.shields.io/badge/Tests-Jest-red?logo=jest&style=flat)](https://github.com/facebook/jest)
-[![testing: Enzyme](https://img.shields.io/badge/Tests-Enzyme-red?logo=enzyme&style=flat)](https://github.com/enzymejs/enzyme)
 
 ### Cloning the repository
 
