@@ -19,7 +19,7 @@ const IntentReply: React.FC<Props> = ({ description, reply = {} }) => {
           <Text color="dimmed">{description}</Text>
         </Group>
       </Group>
-      <MultiSelect label="Expressions" data={[{ value: reply.id, label: reply.text }]} />
+      <MultiSelect label="Response" data={[{ value: reply.id, label: reply.text }]} />
     </Paper>
   );
 }

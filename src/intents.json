@@ -6,7 +6,7 @@
     "description": "The visitor says hello.",
     "trainingData": {
       "expressionCount":145,
-      "expessions": [
+      "expressions": [
         {
           "id": "6399fd6989984c7b871c6301744b0af5",
           "text": "Hello"
@@ -33,7 +33,7 @@
     "description": "The visitor says goodbye.",
     "trainingData": {
       "expressionCount": 86,
-      "expessions": [
+      "expressions": [
         {
           "id": "6bb364d2e3364e03b4ca30c6e46ea1dd",
           "text": "Thanks, bye!"
@@ -60,7 +60,7 @@
     "description": "The visitor confirms that something is true / correct.",
     "trainingData": {
       "expressionCount": 54,
-      "expessions": [
+      "expressions": [
         {
           "id": "13039d5bff7b4e3c951c716826f3598d",
           "text": "Yeah"
@@ -87,7 +87,7 @@
     "description": "The visitor confirms that they don't need help / something is not true or similar.",
     "trainingData": {
       "expressionCount": 49,
-      "expessions": [
+      "expressions": [
         {
           "id": "438303d11e3a4833973c7319cdf23275",
           "text": "No thanks!"
@@ -114,7 +114,7 @@
     "description": "The visitor says thank you.",
     "trainingData": {
       "expressionCount": 76,
-      "expessions": [
+      "expressions": [
         {
           "id": "71dbc302036d4257bbb6c477e0e0a7fc",
           "text": "Brilliant! Thanks!"
@@ -141,7 +141,7 @@
     "description": "The visitor wants to know if they are talking to a bot or a human.",
     "trainingData": {
       "expressionCount": 32,
-      "expessions": [
+      "expressions": [
         {
           "id": "7b943480157041ae971c019a4f60b0f4",
           "text": "Are u human?"
@@ -222,7 +222,7 @@
     "description": "The visitor wants to create a new account or close an existing one.",
     "trainingData": {
       "expressionCount": 38,
-      "expessions": [
+      "expressions": [
         {
           "id": "5216d8a096f44cf681b54cac19b8f29a",
           "text": "Where do I open a new account?"
