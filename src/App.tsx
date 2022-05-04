@@ -14,15 +14,12 @@ function App() {
     setActiveIntent(id);
   }, []);
 
-  const handleSave = useCallback((values) => {
-    console.log(values)
-  }, []);
-
   return (
-    <MantineProvider theme={{ 
+    <MantineProvider theme={{
       fontFamily: 'Satoshi',
-     }}>
-       <NotificationsProvider>
+    }}
+    >
+      <NotificationsProvider>
         <AppShell
           navbar={<Sidebar onChange={handleChange} active={activeIntent} />}
           styles={(theme) => ({
@@ -30,7 +27,11 @@ function App() {
           })}
         >
           <Container style={{ minHeight: '100vh' }}>
-            <Intent id={activeIntent} key={activeIntent} onSave={handleSave} data={find(intents, { id: activeIntent })} />
+            <Intent
+              id={activeIntent}
+              key={activeIntent}
+              data={find(intents, { id: activeIntent })}
+            />
           </Container>
         </AppShell>
       </NotificationsProvider>

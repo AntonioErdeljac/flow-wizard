@@ -7,14 +7,12 @@ import { useIntent } from './hooks';
 import { IntentHeader, IntentExpression, IntentReply } from '../../components';
 import { iconsMap } from '../../constants';
 
-
 type Props = {
   data: any;
-  onSave: (values: Record<string, any>) => void;
   id: string;
 };
 
-const Intent: React.FC<Props> = ({ id, data, onSave }) => {
+const Intent: React.FC<Props> = ({ id, data }) => {
   const [
     loading,
     expressions,
@@ -23,9 +21,8 @@ const Intent: React.FC<Props> = ({ id, data, onSave }) => {
     handleSave,
     handleExpressionsChange,
     handleReplyChange,
-    handleEnable
-  ] = useIntent({ data, id, onSave });
-
+    handleEnable,
+  ] = useIntent({ data, id });
 
   return (
     <>
@@ -34,27 +31,27 @@ const Intent: React.FC<Props> = ({ id, data, onSave }) => {
           <IntentHeader title={`${data.name} Intent`} icon={iconsMap[data.icon]} description={`Trigger response on user ${data.name}`} />
         </Timeline.Item>
         <Timeline.Item>
-          <IntentExpression 
-            onChange={handleExpressionsChange} 
-            description={data.description} 
+          <IntentExpression
+            onChange={handleExpressionsChange}
+            description={data.description}
             expressions={data.trainingData.expressions.map((expression: any) => ({ value: expression.id, label: expression.text }))}
             values={expressions}
           />
         </Timeline.Item>
         <Timeline.Item>
-          <IntentReply 
+          <IntentReply
             onChange={handleReplyChange}
-            description="The bot responds" 
+            description="The bot responds"
             reply={[{ value: data.reply.id, label: data.reply.text }]}
             value={reply}
           />
         </Timeline.Item>
       </Timeline>
       <Center mt="xl">
-        <Button 
-          loading={loading} 
-          onClick={handleEnable} 
-          variant="light" 
+        <Button
+          loading={loading}
+          onClick={handleEnable}
+          variant="light"
           rightIcon={enabled ? <PlayerStop size={20} /> : <PlayerPlay size={20} />}
         >
           {enabled ? 'Stop' : 'Enable'}
@@ -63,6 +60,6 @@ const Intent: React.FC<Props> = ({ id, data, onSave }) => {
       </Center>
     </>
   );
-  }
+};
 
 export default Intent;

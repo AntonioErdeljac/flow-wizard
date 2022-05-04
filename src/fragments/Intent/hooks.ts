@@ -1,28 +1,31 @@
-import { useCallback, useState } from "react";
-import { useLocalStorage } from "@mantine/hooks";
-import { showNotification } from "@mantine/notifications";
+import { useCallback, useState } from 'react';
+import { useLocalStorage } from '@mantine/hooks';
+import { showNotification } from '@mantine/notifications';
 
 const FAKE_NETWORK_DELAY_MS = 1000;
 
 const formatExpressions = (value: any) => value.trainingData.expressions.map((expression: any) => expression.id);
 const formatReply = (value: any) => [value.reply.id];
 
-export const useIntent = ({ data, id, onSave }: { data: any, id: string, onSave: (values: Record<string, any>) => void, }) => {
-  const [intentsData, setIntentsData] = useLocalStorage({ key: id , defaultValue: { 
-    expressions: formatExpressions(data),
-    reply: formatReply(data),
-    enabled: false,
-  }});
+export const useIntent = ({ data, id }: { data: any, id: string }) => {
+  const [intentsData, setIntentsData] = useLocalStorage({
+    key: id,
+    defaultValue: {
+      expressions: formatExpressions(data),
+      reply: formatReply(data),
+      enabled: false,
+    },
+  });
 
   const [loading, setLoading] = useState(false);
-  const [expressions, setExpressions] = useState(() => intentsData.expressions || formatExpressions(data)); 
+  const [expressions, setExpressions] = useState(() => intentsData.expressions || formatExpressions(data));
   const [reply, setReply] = useState(() => intentsData.reply || formatExpressions(data));
   const [enabled, setEnabled] = useState(() => intentsData.enabled || false);
 
   const handleSave = useCallback(() => {
     setLoading(true);
     setIntentsData((current) => ({
-     ...current,
+      ...current,
       reply,
       expressions,
     }));
@@ -33,11 +36,11 @@ export const useIntent = ({ data, id, onSave }: { data: any, id: string, onSave:
   }, [reply, expressions, setIntentsData, data.name]);
 
   const handleExpressionsChange = useCallback((value) => {
-    setExpressions(value)
+    setExpressions(value);
   }, []);
 
   const handleReplyChange = useCallback((value) => {
-    setReply(value)
+    setReply(value);
   }, []);
 
   const handleEnable = useCallback(() => {
@@ -61,6 +64,6 @@ export const useIntent = ({ data, id, onSave }: { data: any, id: string, onSave:
     handleSave,
     handleExpressionsChange,
     handleReplyChange,
-    handleEnable
+    handleEnable,
   ] as any;
 };

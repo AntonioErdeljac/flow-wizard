@@ -1,8 +1,10 @@
 import React from 'react';
-import { createStyles, Header, Container,  Text, ThemeIcon, Group } from '@mantine/core';
+import {
+  createStyles, Header, Container, Text, ThemeIcon, Group,
+} from '@mantine/core';
 import { SquarePlus } from 'tabler-icons-react';
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   header: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -10,7 +12,6 @@ const useStyles = createStyles((theme) => ({
     height: '100%',
   },
 }));
-
 
 const Navbar = () => {
   const { classes } = useStyles();
