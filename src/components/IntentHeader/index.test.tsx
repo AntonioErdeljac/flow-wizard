@@ -7,6 +7,7 @@ test('Renders correct Title, Description', () => {
   const title = 'Lorem';
   const description = 'Ipsum';
 
+  //@ts-ignore
   render(<IntentHeader title={title} description={description} icon={Users} />);
 
   const titleElement = screen.getByText(/Lorem/i);
