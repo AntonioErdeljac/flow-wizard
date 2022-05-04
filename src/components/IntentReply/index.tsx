@@ -4,10 +4,12 @@ import { Bolt } from 'tabler-icons-react';
 
 type Props = {
   description: string;
-  reply: Record<string, any>;
+  reply: any;
+  onChange: (value: any) => void;
+  value: any;
 }
 
-const IntentReply: React.FC<Props> = ({ description, reply = {} }) => {
+const IntentReply: React.FC<Props> = ({ description, reply = {}, onChange, value }) => {
   return (
     <Paper radius="md" withBorder p="md">
       <Group mb="xl">
@@ -19,7 +21,7 @@ const IntentReply: React.FC<Props> = ({ description, reply = {} }) => {
           <Text color="dimmed">{description}</Text>
         </Group>
       </Group>
-      <MultiSelect label="Response" data={[{ value: reply.id, label: reply.text }]} />
+      <MultiSelect onChange={onChange} value={value} label="Response" data={reply} />
     </Paper>
   );
 }

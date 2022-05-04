@@ -1,13 +1,16 @@
 import React from 'react';
 import {  Group, MultiSelect, Paper, Text, ThemeIcon } from '@mantine/core';
 import { PlayerPlay } from 'tabler-icons-react';
+import { find } from 'lodash';
 
 type Props = {
   description: string;
-  expressions: Record<string, any>[];
+  expressions: any[];
+  onChange: (value: any) => void;
+  values: any;
 };
 
-const IntentExpression: React.FC<Props> = ({ description, expressions = [] }) => {
+const IntentExpression: React.FC<Props> = ({ description, expressions = [], onChange, values }) => {
   return (
     <Paper radius="md" withBorder p="lg">
       <Group mb="xl">
@@ -19,7 +22,7 @@ const IntentExpression: React.FC<Props> = ({ description, expressions = [] }) =>
           <Text color="dimmed">{description}</Text>
         </Group>
       </Group>
-      <MultiSelect label="Expressions" data={expressions.map((expression) => ({ value: expression.id, label: expression.text }))} />
+      <MultiSelect value={values} onChange={onChange} label="Expressions" data={expressions} />
     </Paper>
   );
 }

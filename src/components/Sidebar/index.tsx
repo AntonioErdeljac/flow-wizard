@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Group, Code, Text } from '@mantine/core';
+import { Navbar, Group, Code, Text, Badge } from '@mantine/core';
 
 import { useStyles } from './styles';
 
@@ -29,12 +29,13 @@ const Sidebar: React.FC<Props> = ({ onChange, active }) => {
       >
         <Icon className={classes.linkIcon} />
         <span>{item.name}</span>
+        <Badge style={{ cursor: 'pointer' }} color={item.id === active ? 'blue' : 'gray'} ml="md">{item.trainingData.expressionCount}</Badge>
       </a>
     )
   });
 
   return (
-    <Navbar height={700} width={{ sm: 300 }} p="md">
+    <Navbar style={{ minHeight: '100vh' }} width={{ sm: 300 }} p="md">
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
           <Text transform="uppercase" weight="bold">Flow Wizard</Text>
