@@ -1,5 +1,6 @@
 [
   {
+    "icon": "Users",
     "id": "34d7831e137a4016a55f98926800a643",
     "name": "Greeting",
     "description": "The visitor says hello.",
@@ -26,6 +27,7 @@
     }
   },
   {
+    "icon": "DoorExit",
     "id": "b6ec3deac5f94500aef55d9c410e37f7",
     "name": "Goodbye",
     "description": "The visitor says goodbye.",
@@ -52,6 +54,7 @@
     }
   },
   {
+    "icon": "Checks",
     "id": "61e218983f8b49f79405e8cf22992e61",
     "name": "Affirmative",
     "description": "The visitor confirms that something is true / correct.",
@@ -78,6 +81,7 @@
     }
   },
   {
+    "icon": "CircleMinus",
     "id": "5a13917dac654cfaa10619de37a673c4",
     "name": "Negative",
     "description": "The visitor confirms that they don't need help / something is not true or similar.",
@@ -104,6 +108,7 @@
     }
   },
   {
+    "icon": "HeartPlus",
     "id": "629ebabd5d714900bbc7eb2c9eceb927",
     "name": "Thank you",
     "description": "The visitor says thank you.",
@@ -130,6 +135,7 @@
     }
   },
   {
+    "icon": "Robot",
     "id": "f83a8f67dd8e4eef8c743a0f324aeca0",
     "name": "Are you a bot?",
     "description": "The visitor wants to know if they are talking to a bot or a human.",
@@ -156,6 +162,7 @@
     }
   },
   {
+    "icon": "UserCheck",
     "id": "f505432f6dcd40548983e4eab1675429",
     "name": "I want to speak with a human",
     "description": "The visitor wants to speak to a human agent.",
@@ -182,6 +189,7 @@
     }
   },
   {
+    "icon": "Login",
     "id": "0edf4a33873d482f857bfa0a5c16b7ce",
     "name": "Login Problems",
     "description": "The visitor has trouble logging in.",
@@ -208,6 +216,7 @@
     }
   },
   {
+    "icon": "Help",
     "id": "29a0d3b7cecc4fe5955f6c5c30fbcf6b",
     "name": "Open or close account",
     "description": "The visitor wants to create a new account or close an existing one.",

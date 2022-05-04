@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback, useState } from 'react';
+import { AppShell, Container, MantineProvider } from '@mantine/core';
+import { find } from 'lodash';
+
+import { Intent, Sidebar } from './components';
+
+import intents from './intents.json';
 
 function App() {
+  const [activeIntent, setActiveIntent] = useState(intents[0].id);
+
+  const handleChange = useCallback((id) => {
+    setActiveIntent(id);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider theme={{ 
+      fontFamily: 'Satoshi',
+     }}>
+      <AppShell
+        navbar={<Sidebar onChange={handleChange} active={activeIntent} />}
+        styles={(theme) => ({
+          main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
+        })}
+      >
+        <Container>
+          <Intent data={find(intents, { id: activeIntent })} />
+        </Container>
+      </AppShell>
+    </MantineProvider>
   );
 }
 
