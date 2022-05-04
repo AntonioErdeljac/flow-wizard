@@ -4,10 +4,9 @@ Flow Wizard built using Typescript and React, uses LocalStorage as DB. React Tes
 
 ### CI / CD
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4f615b92-82ed-451d-8939-9f86d3f8c0f5/deploy-status)](https://app.netlify.com/sites/quizzical-cray-6ae2e4/deploys)
-![Node.js CI](https://github.com/AntonioErdeljac/js-pokedex/workflows/Node.js%20CI/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d4f2024b-4fba-430c-aa3a-d6b413c9899a/deploy-status)](https://app.netlify.com/sites/nimble-treacle-013c0b/deploys)
 
-[Live version](https://reverent-lewin-6110a6.netlify.app/)
+[Live version](https://nimble-treacle-013c0b.netlify.app/)
 
 ### Lint
 
